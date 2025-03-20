@@ -1,28 +1,111 @@
-#include<stdio.h> #include<conio.h> struct stud { char rollno[9]; char name[30];  int s1,s2,s3,s4,s5; }student[100]; void main() { int i=1,j,temp; char ch; clrscr(); do { printf("Enter roll no:"); scanf("%s",&student[i].rollno); printf("\nEnter name of the student:"); scanf("%s",&student[i].name); printf("\nEnter Tamil mark:"); scanf("%d",&student[i].s1); printf("\nEnter English mark:"); scanf("%d",&student[i].s2); printf("\nEnter C mark:"); scanf("%d",&student[i].s3); printf("\nEnter DCF mark:"); scanf("%d",&student[i].s4); printf("\nEnter Maths mark:"); scanf("%d",&student[i].s5); i++; printf("Do you want to continue (y/n) :"); scanf("%s",&ch); } while(ch!='n'); for(j=1;j<=i-1;j++) 
+#include<stdio.h>
 
-{ clrscr(); 
+#include<conio.h>
 
-printf("\t........................................................................................................\n\n"); 
+struct stud
 
-printf("\t\t\t BHARATHIAR UNIVERSITY \n"); 
+{
 
-printf("\t........................................................................................................\n"); printf("\n\t REGISTER NUMBER : %s \t\t NAME     :%s\n",student[j].rollno, student[j].name); 
+char rollno[9]; char name[30]; 
 
-printf("\t........................................................................................................\n"); 
+int s1,s2,s3,s4,s5;
 
-printf("\n\t SUB \t SUBJECT \t MAX      MARKS \t\t RESULT\n"); printf(" \tCODE  \t NAME    \t MARK     SECURED \n"); 
+}student[100];
 
-printf("\t........................................................................................................\n"); 
+void main()
 
-printf("\n\t11T \t Tamil \t\t 100 %d \t\t ", student[j].s1); (student[j].s1>39)?printf("pass"):printf("fail"); printf("\n\t12E \t English \t\t 100 %d \t\t ", student[j].s2); 
+{
 
-(student[j].s2>39)?printf("pass"):printf("fail"); printf("\n\t13A \t C \t\t 100 %d \t\t ", student[j].s3); (student[j].s3>39)?printf("pass"):printf("fail"); printf("\n\t13BT \t DCF \t\t 100 %d \t\t ", student[j].s4); (student[j].s4>39)?printf("pass"):printf("fail"); printf("\n\t1AA \t Maths \t\t 100 %d \t\t ", student[j].s5); 
+int i=1,j,temp; char ch;
 
-(student[j].s5>39)?printf("pass"):printf("fail"); 
+clrscr();
 
-printf("\n\t....................................................................................................\n"); getch(); 
+do
 
-} 
+{
 
-} 
+printf("Enter roll no:");
 
+scanf("%s",&student[i].rollno);
+
+printf("\nEnter name of the student:");
+
+scanf("%s",&student[i].name);
+
+printf("\nEnter Tamil mark:");
+
+scanf("%d",&student[i].s1);
+
+printf("\nEnter English mark:");
+
+scanf("%d",&student[i].s2);
+
+printf("\nEnter C mark:");
+
+scanf("%d",&student[i].s3);
+
+printf("\nEnter DCF mark:");
+
+scanf("%d",&student[i].s4);
+
+printf("\nEnter Maths mark:");
+
+scanf("%d",&student[i].s5);
+
+i++;
+
+printf("Do you want to continue (y/n) :");
+
+scanf("%s",&ch);
+
+} while(ch!='n');
+
+for(j=1;j<=i-1;j++)
+
+{
+
+clrscr();
+
+printf("\t........................................................................................................\n\n");
+
+printf("\t\t\t BHARATHIAR UNIVERSITY \n");
+
+printf("\t........................................................................................................\n");
+
+printf("\n\t REGISTER NUMBER : %s \t\t NAME     :%s\n",student[j].rollno, student[j].name);
+
+printf("\t........................................................................................................\n");
+
+printf("\n\t SUB \t SUBJECT \t MAX      MARKS \t\t RESULT\n");
+
+printf(" \tCODE  \t NAME    \t MARK     SECURED \n");
+
+printf("\t........................................................................................................\n");
+
+printf("\n\t11T \t Tamil \t\t 100 %d \t\t ", student[j].s1);
+
+(student[j].s1>39)?printf("pass"):printf("fail");
+
+printf("\n\t12E \t English \t\t 100 %d \t\t ", student[j].s2);
+
+(student[j].s2>39)?printf("pass"):printf("fail");
+
+printf("\n\t13A \t C \t\t 100 %d \t\t ", student[j].s3);
+
+(student[j].s3>39)?printf("pass"):printf("fail");
+
+printf("\n\t13BT \t DCF \t\t 100 %d \t\t ", student[j].s4);
+
+(student[j].s4>39)?printf("pass"):printf("fail");
+
+printf("\n\t1AA \t Maths \t\t 100 %d \t\t ", student[j].s5);
+
+(student[j].s5>39)?printf("pass"):printf("fail");
+
+printf("\n\t....................................................................................................\n");
+
+getch();
+
+}
+
+}
