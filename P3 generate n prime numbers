@@ -1,0 +1,46 @@
+#include<stdio.h>
+
+#include<conio.h>
+
+void main()
+
+{
+
+int n,no=3,i,n1=0;
+
+clrscr();
+
+printf("\t\t PROGRAM TO GENERATE N PRIME NUMBERS");
+
+printf("\n\nEnter n value:");
+
+scanf("%d",&n);
+
+while(n1!=n)
+
+{
+
+for(i=2;i<=no/2;i++)
+
+{
+
+if(no%i==0)
+
+goto nextno;
+
+}
+
+printf("\t %d",no);
+
+sleep(2);
+
+n1++;
+
+nextno:no++;
+
+}
+
+getch();
+
+}
+
