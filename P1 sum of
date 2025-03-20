@@ -1,0 +1,24 @@
+#include<stdio.h> 
+#include<conio.h> 
+void main() 
+{       
+long int n,rem,sum = 0;       
+printf("\nEnter a number : ");       
+scanf("%ld",&n);       
+while(n > 0) 
+{ 
+while(n != 0) 
+{ 
+rem = n%10;                       
+sum = sum+rem; 
+n=n/10; 
+} 
+if(sum > 9) 
+{                         
+n = sum;                         
+sum = 0; 
+}          
+} 
+printf("%d",sum); 
+getch(); 
+} 
