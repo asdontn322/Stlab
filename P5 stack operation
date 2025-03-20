@@ -1,0 +1,92 @@
+#include<stdio.h>
+
+#include<conio.h>
+
+void main()
+
+{
+
+	int stack[100],top=0,i,j,ch,max=5;
+
+	clrscr();
+
+	printf("\t STACK OPERATION\n");
+
+	printf(“\t ****************** \n”);
+
+	printf("\t OPTIONS");
+
+	printf("\n Enter the size of stack");
+
+	scanf("%d",&max);
+
+	printf("\n[1].push \n[2].pop\n [3].display\n[4].exit\n");
+
+	for(;;)
+
+	{
+
+		printf("\n Enter your choice");
+
+		scanf("%d",&ch);
+
+	switch(ch)
+
+	{
+
+	   case 1:
+
+		if(top>=max)  printf("\n stack is full");
+
+		else
+
+		{
+
+			printf("Enter the value to be pushed");
+
+			scanf("%d",&stack[top++]);
+
+		}
+
+		break;
+
+	    case 2:
+
+		if(top==0)  printf("Stack is empty");
+
+		else
+
+		printf("popped item is: %d",stack[--top]);
+
+		break;
+
+	     case 3:
+
+		if(top==0) printf("Stack is empty");
+
+		else
+
+		{
+
+			printf("Items in the stack");
+
+			for(i=top-1;i>=0;i--)
+
+			printf("\n%d",stack[i]);
+
+		}
+
+		printf("\n_____\n stack");
+
+		break;
+
+		default:exit(0);
+
+}
+
+getch();
+
+}
+
+}
+
