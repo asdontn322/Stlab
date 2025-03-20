@@ -1,0 +1,128 @@
+#include<stdio.h>
+
+#include<conio.h>
+
+void main()
+
+{
+
+int queue[30],front=0,rear=0,size,*pt,i,num,num1,ch;
+
+clrscr();
+
+printf("\t QUEUE OPERATION\n");
+
+printf(“\t *******************\n”);
+
+printf("\n Enter the size of queue:");
+
+scanf("%d",&size);
+
+printf("\n[1].insert [2].Delete [3].Display [4].Modify [5].Exit");
+
+while(1)
+
+{
+
+printf("\n your choice");
+
+scanf("%d",&ch);
+
+switch(ch)
+
+{
+
+case 1:if(rear==size)
+
+{
+
+printf("\n queue is full");
+
+break;
+
+}
+
+else
+
+{
+
+printf("\n Enter an item to insert");
+
+scanf("%d",&queue[rear]);
+
+rear++;
+
+}
+
+break;
+
+case 2:if(front==rear)
+
+printf("\n queue is empty");
+
+else
+
+printf("\n Deleted item is %d",queue[front++]);
+
+break;
+
+case 3:
+
+pt=&queue[front];
+
+printf("\n front--->");
+
+for(i=front;i<rear;i++)
+
+{
+
+printf("\n%d\t",*pt);
+
+pt++;
+
+}
+
+
+
+printf("\n<--  rear");
+
+break;
+
+case 4:
+
+printf("\n Enter the number to find:");
+
+scanf("%d",&num);
+
+printf("\n Enter the number to modify:");
+
+scanf("%d",&num1);
+
+pt=&queue[front];
+
+for(i=front;i<rear;i++)
+
+if(num==*pt)
+
+{
+
+*pt=num1;
+
+printf("\n Replaced num is %d in queue:",num1);
+
+}
+
+else
+
+pt++;
+
+break;
+
+default:exit(0);
+
+}
+
+}
+
+}
+
