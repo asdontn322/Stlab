@@ -1,0 +1,82 @@
+#include<stdio.h>
+
+#include<conio.h>
+
+void main ()
+
+{
+
+	int a[50],b[50],c[50],i,j,k=0,n,temp;
+
+	clrscr();
+
+	printf("\n\t MERGING AND SORTING");
+
+	printf("\n\t ************************");
+
+	printf("\n Enter the No. of elements");
+
+	scanf("%d",&n);
+
+	printf("\n Enter the A Array elements");
+
+	for(i=0;i<n;i++)
+
+	scanf("%d",&a[i]);
+
+	printf("\n Enter the B Array elements");
+
+	for(i=0;i<n;i++)
+
+	scanf("%d",&b[i]);
+
+	for(i=0;i<n;i++)
+
+	c[k+i]=a[i];
+
+	k=n;
+
+	for(i=0;i<n;i++)
+
+	c[k+i]=b[i];
+
+	k=2*n;
+
+	printf("\n\n Elements before sorting:\n");
+
+	for(i=0;i<k;i++)
+
+	printf("%d\t",c[i]);
+
+	for(j=0;j<k;j++)
+
+		for(i=j+1;i<k;i++)
+
+		{
+
+			if(c[j]>c[i])
+
+			{
+
+				temp=c[i];
+
+				c[i]=c[j];
+
+				c[j]=temp;
+
+			}
+
+		}
+
+	printf("\n\t Element after sorting:\n");
+
+	for(i=0;i<k;i++)
+
+	printf("%d\t",c[i]);
+
+	getch();
+
+}
+
+
+
